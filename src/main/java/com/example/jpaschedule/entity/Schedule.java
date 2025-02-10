@@ -1,29 +1,32 @@
 package com.example.jpaschedule.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 @Entity
+@Table(name = "schedule")
+@NoArgsConstructor
 public class Schedule extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
+
+    @Column(nullable = false)
     private String title;
+
+    @Column(columnDefinition = "longtext")
     private String content;
 
-    public Schedule(String username, String title, String content) {
-        this.username = username;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public Schedule(User user, String title, String content) {
+        this.user = user;
         this.title = title;
         this.content = content;
     }
 
-    public Schedule() {
-
-    }
 }
