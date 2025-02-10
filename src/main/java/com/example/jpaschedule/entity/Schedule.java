@@ -23,10 +23,4 @@ public class Schedule extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Schedule(User user, String title, String content) {
-        this.user = user;
-        this.title = title;
-        this.content = content;
-    }
-
 }

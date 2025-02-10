@@ -1,29 +1,32 @@
 package com.example.jpaschedule.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 
 @Getter
 @Entity
-@NoArgsConstructor
+@Table(name = "user")
 public class User extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String password;
 
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
+    public User() {
     }
 
-    public User() {
-
+    public User(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
     }
 }
