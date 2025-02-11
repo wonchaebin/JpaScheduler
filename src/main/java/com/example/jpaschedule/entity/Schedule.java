@@ -14,6 +14,9 @@ public class Schedule extends BaseEntity {
     private Long id;
 
     @Column(nullable = false)
+    private String username;
+
+    @Column(nullable = false)
     private String title;
 
     @Column(columnDefinition = "longtext")
@@ -23,4 +26,15 @@ public class Schedule extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public Schedule(String username, String title, String content) {
+        this.username = username;
+        this.title = title;
+        this.content = content;
+    }
+
+    public void update(String username, String title, String content) {
+        this.username = username;
+        this.title = title;
+        this.content = content;
+    }
 }
