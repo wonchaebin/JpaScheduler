@@ -22,26 +22,20 @@ public class ScheduleController {
 
     @GetMapping("/schedules/{id}") //일정 단건 조회
     public ResponseEntity<ScheduleResponseDto> findScheduleById(@PathVariable Long id) {
-        ScheduleResponseDto schedulefindById = scheduleService.findScheduleById(id);
-
-        return new ResponseEntity<>(schedulefindById, HttpStatus.OK);
+        return ResponseEntity.ok(scheduleService.findScheduleById(id));
     }
 
     @GetMapping("/schedules") //일정 전체 조회
     public ResponseEntity<List<ScheduleResponseDto>> findAllSchedules() {
-        List<ScheduleResponseDto> schedules = scheduleService.findAllSchedules();
-
-        return new ResponseEntity<>(schedules, HttpStatus.OK);
+        return ResponseEntity.ok(scheduleService.findAllSchedules());
     }
 
     @PutMapping("/schedules/{id}") //일정 수정
     public ResponseEntity<ScheduleResponseDto> updateSchedule(@PathVariable Long id, @RequestBody ScheduleRequestDto dto) {
-        scheduleService.updateSchedule(id, dto);
-
-        return new ResponseEntity<>(HttpStatus.OK);
+        return ResponseEntity.ok(scheduleService.updateSchedule(id, dto));
     }
 
-    @DeleteMapping("/schedule/{id}") //일정 삭제
+    @DeleteMapping("/schedules/{id}") //일정 삭제
     public void deleteSchdeule(@PathVariable Long id) {
         scheduleService.deleteSchedule(id);
     }

@@ -53,6 +53,7 @@ public class ScheduleService {
         return new ScheduleResponseDto(schedule.getId(), schedule.getUsername(), schedule.getTitle(), schedule.getContent(), schedule.getCreatedAt(), schedule.getUpdatedAt());
     }
 
+    @Transactional
     public void deleteSchedule(Long id) {
         scheduleRepository.deleteById(id);
     }

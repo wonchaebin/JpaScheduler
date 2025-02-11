@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -36,9 +35,8 @@ public class UserController {
     }
 
     @PutMapping("/users/{id}")
-    public ResponseEntity<UserResponseDto> updateUser(@PathVariable Long id, @RequestBody UserRequestDto requestDto) {
-        userService.update(id, requestDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<UserResponseDto> updateUser(@PathVariable Long id, @RequestBody UserRequestDto dto) {
+        return ResponseEntity.ok(userService.updateUser(id, dto));
     }
 
     @DeleteMapping("/users/{id}")

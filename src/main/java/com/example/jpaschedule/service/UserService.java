@@ -44,7 +44,7 @@ public class UserService {
     }
 
     @Transactional
-    public UserResponseDto update(Long id, UserRequestDto requestDto) { //유저 수정
+    public UserResponseDto updateUser(Long id, UserRequestDto requestDto) { //유저 수정
         User user = userRepository.findById(id).orElseThrow(
                 ()->new IllegalArgumentException("해당 Id에 해당하는 유저가 없습니다."));
         user.update(requestDto.getName(), requestDto.getPassword(), requestDto.getEmail());
