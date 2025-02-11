@@ -16,3 +16,9 @@
 
 ### 5. DELETE 일정 삭제
 ![image](https://github.com/user-attachments/assets/f010318c-4e5a-4104-a104-5f6a90a3d09c)
+
+## User 포스트맨
+
+### 1. POST 유저 등록
+![image](https://github.com/user-attachments/assets/9c56b67a-6cdf-4cc4-8ae6-a968224942a0)
+
