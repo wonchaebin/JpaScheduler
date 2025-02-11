@@ -7,3 +7,6 @@
 
 ### 2. GET 단일 일정 조회
 ![image](https://github.com/user-attachments/assets/7a5ecbef-0e4e-4c9c-a30d-dc5391471805)
+
+### 3. GET 전체 일정 조회
+![image](https://github.com/user-attachments/assets/cdd916e0-d93e-456c-a289-e51b87532004)
