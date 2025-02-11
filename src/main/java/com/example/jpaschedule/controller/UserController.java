@@ -1,7 +1,5 @@
 package com.example.jpaschedule.controller;
 
-import com.example.jpaschedule.dto.ScheduleRequestDto;
-import com.example.jpaschedule.dto.ScheduleResponseDto;
 import com.example.jpaschedule.dto.UserRequestDto;
 import com.example.jpaschedule.dto.UserResponseDto;
 import com.example.jpaschedule.service.UserService;
