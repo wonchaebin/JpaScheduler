@@ -10,3 +10,6 @@
 
 ### 3. GET 전체 일정 조회
 ![image](https://github.com/user-attachments/assets/cdd916e0-d93e-456c-a289-e51b87532004)
+
+### 4. PUT 일정 수정
+![image](https://github.com/user-attachments/assets/ceee8250-7807-469a-9747-71142324d4a3)
