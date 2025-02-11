@@ -13,3 +13,6 @@
 
 ### 4. PUT 일정 수정
 ![image](https://github.com/user-attachments/assets/ceee8250-7807-469a-9747-71142324d4a3)
+
+### 5. DELETE 일정 삭제
+![image](https://github.com/user-attachments/assets/f010318c-4e5a-4104-a104-5f6a90a3d09c)
